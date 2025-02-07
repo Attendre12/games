@@ -1,0 +1,117 @@
+/* 全局样式 */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #1a1a1a, #333333);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 主容器 */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 游戏内容区域 */
+.game-content {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 木鱼和锤子包裹层 */
+.muyu-chuizi-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* 锤子图片 */
+#chuizi {
+  position: absolute;
+  width: 39%;
+  height: auto;
+  top: -138px;
+  right: 47px;
+  vertical-align: middle;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 2;
+}
+
+/* 木鱼图片 */
+#muyu {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+/* 计数显示 */
+.count-display {
+  font-size: 36px;
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* 说明区域 */
+.instructions {
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* 游戏标题 */
+.game-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+/* 游戏说明 */
+.game-instruction {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* 媒体查询：屏幕宽度小于 600px 时（适用于大多数手机屏幕） */
+@media (max-width: 600px) {
+  /* 锤子图片 */
+  #chuizi {
+      width: 45%;
+      top: -110px; /* 原来 -80px，往下移动 100px 变为 -30px */
+      right: 30px;
+  }
+
+  /* 计数显示 */
+  .count-display {
+      font-size: 28px;
+  }
+
+  /* 游戏标题 */
+  .game-title {
+      font-size: 28px;
+  }
+
+  /* 游戏说明 */
+  .game-instruction {
+      font-size: 16px;
+  }
+}
